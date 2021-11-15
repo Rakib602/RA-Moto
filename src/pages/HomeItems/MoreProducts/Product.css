@@ -1,0 +1,16 @@
+    h2{
+     font-family:Permanent Marker;
+    color: crimson;
+    }
+
+    .btn:hover{
+        
+        background-color: green;
+        color:white;
+    }
+    .card-body:hover .card{
+        box-shadow: 3px 2px 5px gray;
+    }
+    .card{
+        color:white
+    }

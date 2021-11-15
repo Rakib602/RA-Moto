@@ -1,0 +1,20 @@
+.footer-text{
+    color: white;
+    line-height: 2;
+}
+.footer-text ul{
+    padding-left: 0;
+}
+.footer-text li{
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    
+}
+.footer-text p{
+    font-size: 20px;
+}
+.footer-text h3{
+     font-family:Permanent Marker;
+}

@@ -1,0 +1,21 @@
+.about{
+    color: white;
+    padding: 20px;
+}
+.text{
+    text-align: justify;
+    padding-top: 75px;
+    font-size: 20px;
+}
+.about h2{
+    font-family:Permanent Marker;
+    color: crimson;
+    padding: 10px;
+}
+
+@media  only screen and (max-width:688px){
+    .text{
+        padding: 10px;
+
+    }
+}
