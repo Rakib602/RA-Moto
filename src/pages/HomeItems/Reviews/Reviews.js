@@ -9,7 +9,7 @@ import Rating from 'react-rating';
 const Reviews = () => {
     const [usersReview, setUsersReview] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/getReviews')
+        fetch('https://quiet-bayou-58678.herokuapp.com/getReviews')
             .then(res => res.json())
             // .then(data=>console.log(data));
             .then(data => setUsersReview(data.slice(0, 6)));

@@ -7,7 +7,7 @@ import { RiDeleteBin5Fill} from 'react-icons/ri';
 const ManageAllOrders = () => {
     const [bookedProducts,setBookedProducts]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:4000/orders')
+        fetch('https://quiet-bayou-58678.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setBookedProducts(data))
     },[])
@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
         const confirmDelete=window.confirm('Are you sure ? to delete this product from your booking !')
         if(confirmDelete){
             // deleting product by id
-            fetch(`http://localhost:4000/orders${id}`,{
+            fetch(`https://quiet-bayou-58678.herokuapp.com/orders${id}`,{
                 method:'DELETE'})
                 // regulaer process
                 .then(res=>res.json())

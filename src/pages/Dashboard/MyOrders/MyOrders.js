@@ -9,7 +9,7 @@ const MyOrders = () => {
     const {user}=useContextBase();
     const [myBookings,setMyBookings] =useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:4000/orders/${user.email}`)
+        fetch(`https://quiet-bayou-58678.herokuapp.com/orders/${user.email}`)
         .then(res=>res.json())
         .then(data=>setMyBookings(data))
     },[])
@@ -18,7 +18,7 @@ const MyOrders = () => {
       // confrim to delete 
       const confirmDelete =window.confirm('Are You Sure to delete this Package?? ')
     if(confirmDelete){
-      fetch(`http://localhost:4000/orders${id}`,{
+      fetch(`https://quiet-bayou-58678.herokuapp.com/orders${id}`,{
         method:'DELETE'})
 
       .then(res=>res.json())

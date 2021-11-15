@@ -52,7 +52,7 @@ function DashboardHome(props) {
       <Toolbar />
       <Divider />
 
-      {/* NORMAL USERS FEATURES  */}
+     
       {
         !admin && <> 
         <Link to ={`${url}/paynow`}><button className="btn btn-success" style={{textDecoration:'none', width:'100%'}}  >Pay Now</button></Link>
@@ -62,7 +62,7 @@ function DashboardHome(props) {
       }
       
     
-     {/* ADMIN FEATURES   */}
+    
     
       {
         admin &&
@@ -123,14 +123,14 @@ function DashboardHome(props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
@@ -160,7 +160,7 @@ function DashboardHome(props) {
             <Route exact path={path}>
           <MoreProducts></MoreProducts>
             </Route>
-            {/* NO ADMIN FEATURES WITH PRIVATE ROUTE */}
+           
 
             <PrivateRoute  path={`${path}/paynow`}>
           <PayNow></PayNow>
@@ -177,7 +177,7 @@ function DashboardHome(props) {
             
             
 
-            {/* ADMIN FEATURES WITH ADMIN ROUTE */}
+           
 
             <AdminRoute  path={`${path}/manageAllOrders`}>
           <ManageAllOrders></ManageAllOrders>
@@ -203,10 +203,7 @@ function DashboardHome(props) {
 }
 
 DashboardHome.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+ 
   window: PropTypes.func,
 };
 

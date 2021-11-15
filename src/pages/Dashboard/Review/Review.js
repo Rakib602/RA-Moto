@@ -22,7 +22,7 @@ const Review = () => {
           
        
        const newReview = {userName,email, description,rating}
-       fetch('http://localhost:4000/postReview',{
+       fetch('https://quiet-bayou-58678.herokuapp.com/postReview',{
          method:'POST',
          headers:{
            'content-type':'application/json'

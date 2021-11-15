@@ -24,7 +24,7 @@ const AddProduct = () => {
            
         
         const newProduct = {name,price, topspeed,engine,mileage,img}
-        fetch('http://localhost:4000/newBikes',{
+        fetch('https://quiet-bayou-58678.herokuapp.com/newBikes',{
           method:'POST',
           headers:{
             'content-type':'application/json'

@@ -21,9 +21,9 @@ const BuyNow = () => {
   const dateRef = useRef();
   const contactRef = useRef();
 
-  // LOADING DATA BY ID 
+  // Loading data by productId
   useEffect(() => {
-    fetch('http://localhost:4000/bikes')
+    fetch('https://quiet-bayou-58678.herokuapp.com/bikes')
       .then(res => res.json())
       .then(data => setSingleProducts(data))
   }, [])
@@ -34,7 +34,7 @@ const BuyNow = () => {
   }, [singleProducts])
 
 
-  // BOOKING FORM 
+  // from for booking
 
   const handleBookProduct = e => {
     const packageName = packageNameRef.current.value;
@@ -48,7 +48,7 @@ const BuyNow = () => {
 
 
     const newPackage = { packageName, userName, email, address, date, contact }
-    fetch('http://localhost:4000/allOrders', {
+    fetch('https://quiet-bayou-58678.herokuapp.com/allOrders', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
